@@ -1,5 +1,6 @@
-FROM node:10-alpine
+FROM docker
 
-RUN yarn global add heroku
+RUN apk add --update nodejs nodejs-npm
+RUN npm install --global heroku
 
 ENTRYPOINT ["heroku"]
